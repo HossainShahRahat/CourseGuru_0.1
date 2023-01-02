@@ -71,11 +71,7 @@ public class Undergraduate_AIUB_Course extends JFrame {
         Logout.setForeground(new Color(255, 255, 255));
         Logout.setText("Logout");
         Logout.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        Logout.addMouseMotionListener(new MouseMotionAdapter() {
-            public void mouseMoved(MouseEvent evt) {
-                LogoutMouseMoved(evt);
-            }
-        });
+        
         Logout.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
                 LogoutMouseClicked(evt);
@@ -194,11 +190,7 @@ public class Undergraduate_AIUB_Course extends JFrame {
         SelectDepartmentComboBox.setCursor(new Cursor(Cursor.HAND_CURSOR));
         SelectDepartmentComboBox.setDebugGraphicsOptions(DebugGraphics.NONE_OPTION);
         SelectDepartmentComboBox.setEnabled(false);
-        SelectDepartmentComboBox.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                SelectDepartmentComboBoxActionPerformed(evt);
-            }
-        });
+        
         jPanel2.add(SelectDepartmentComboBox);
         SelectDepartmentComboBox.setBounds(60, 350, 400, 26);
 
@@ -250,11 +242,6 @@ public class Undergraduate_AIUB_Course extends JFrame {
         setVisible(false);
     }
 
-    private void LogoutMouseMoved(MouseEvent evt) {
-
-
-    }
-
     private void ExitMouseClicked(MouseEvent evt) {
         System.exit(0);
     }
@@ -280,6 +267,7 @@ public class Undergraduate_AIUB_Course extends JFrame {
             SelectDepartmentComboBox.removeItem("Department of Engineering");
             SelectDepartmentComboBox.removeItem("Department of BBA");
             SelectDepartmentComboBox.removeItem("Department of Media and Mass Communication");
+            SelectDepartmentComboBox.removeItem("Department of IPE");
 
 
 
@@ -316,6 +304,12 @@ public class Undergraduate_AIUB_Course extends JFrame {
            aiub.setVisible(true);
            setVisible(false);
         }
+
+        else if(SelectDepartmentComboBox.getSelectedItem().equals("Department of IPE")){
+            Industrial_and_Production_Engineering aiub = new Industrial_and_Production_Engineering();
+            aiub.setVisible(true);
+            setVisible(false);
+         }
     }
 
     private void SelectUniversityComboBoxActionPerformed(ActionEvent evt) {
@@ -334,6 +328,7 @@ public class Undergraduate_AIUB_Course extends JFrame {
             SelectFacultyComboBox.removeItem("FACULTY OF ENGINEERING");
             SelectFacultyComboBox.removeItem("FACULTY OF BUSINESS ADMINISTRATION");
             SelectFacultyComboBox.removeItem("FACULTY OF ARTS AND SOCIAL SCIENCES");
+            
             SelectFacultyComboBox.addItem("FACULTY OF SCIENCE and TECHNOLOGY");
             SelectFacultyComboBox.addItem("FACULTY OF ENGINEERING");
             SelectFacultyComboBox.addItem("FACULTY OF BUSINESS ADMINISTRATION");
@@ -356,6 +351,7 @@ public class Undergraduate_AIUB_Course extends JFrame {
             SelectDepartmentComboBox.removeItem("Department of BBA");
             SelectDepartmentComboBox.removeItem("Department of Media and Mass Communication");
             SelectDepartmentComboBox.removeItem("Department of English");
+            SelectDepartmentComboBox.removeItem("Department of IPE");
 
             SelectDepartmentComboBox.addItem("Department of Computer Science");
         }
@@ -371,8 +367,10 @@ public class Undergraduate_AIUB_Course extends JFrame {
             SelectDepartmentComboBox.removeItem("Department of BBA");
             SelectDepartmentComboBox.removeItem("Department of Media and Mass Communication");
             SelectDepartmentComboBox.removeItem("Department of English");
+            SelectDepartmentComboBox.removeItem("Department of IPE");
 
             SelectDepartmentComboBox.addItem("Department of Engineering");
+            SelectDepartmentComboBox.addItem("Department of IPE");
         }
 
         else if
@@ -387,6 +385,7 @@ public class Undergraduate_AIUB_Course extends JFrame {
             SelectDepartmentComboBox.removeItem("Department of BBA");
             SelectDepartmentComboBox.removeItem("Department of Media and Mass Communication");
             SelectDepartmentComboBox.removeItem("Department of English");
+            SelectDepartmentComboBox.removeItem("Department of IPE");
 
             SelectDepartmentComboBox.addItem("Department of BBA");
         }
@@ -402,16 +401,12 @@ public class Undergraduate_AIUB_Course extends JFrame {
             SelectDepartmentComboBox.removeItem("Department of BBA");
             SelectDepartmentComboBox.removeItem("Department of Media and Mass Communication");
             SelectDepartmentComboBox.removeItem("Department of English");
+            SelectDepartmentComboBox.removeItem("Department of IPE");
 
             SelectDepartmentComboBox.addItem("Department of Media and Mass Communication");
             SelectDepartmentComboBox.addItem("Department of English");
          }
     }
-
-    private void SelectDepartmentComboBoxActionPerformed(ActionEvent evt) {
-
-    }
-
 
     public static void main(String args[]) {
        
