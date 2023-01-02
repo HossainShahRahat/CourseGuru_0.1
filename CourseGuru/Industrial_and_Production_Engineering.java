@@ -94,11 +94,7 @@ public class Industrial_and_Production_Engineering extends JFrame {
         Logout.setForeground(new Color(255, 255, 255));
         Logout.setText("Logout");
         Logout.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        Logout.addMouseMotionListener(new MouseMotionAdapter() {
-            public void mouseMoved(MouseEvent evt) {
-                LogoutMouseMoved(evt);
-            }
-        });
+        
         Logout.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
                 LogoutMouseClicked(evt);
@@ -400,10 +396,6 @@ public class Industrial_and_Production_Engineering extends JFrame {
         Dashboard d = new Dashboard();
         d.setVisible(true);
         setVisible(false);
-    }
-
-    private void LogoutMouseMoved(MouseEvent evt) {
-
     }
 
     private void ExitMouseClicked(MouseEvent evt) {
